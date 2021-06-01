@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="dist/css/jquery.wizzy.css" rel="stylesheet">
+    <title>Wizzy</title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="info">
+            <h2>jQuery wizzy.js Plugin Demo</h3>
+        </div>
+        <div class="jquery-script-ads" style="margin:20px auto">
+            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+        <!-- Start Wizzy -->
+        <div class="wz-wrapper wizzy">
+            <div class="wz-inner">
+                <div class="wz-header">
+                    <nav>
+                        <a href="#"> <span class="circle">1</span> Entry Type</a>
+                        <a href="#"> <span class="circle">2</span> Personal Details</a>
+                        <a href="#"> <span class="circle">3</span> Select T-shirt Size</a>
+                        <a href="#"> <span class="circle">4</span> Finalise Order</a>
+                    </nav>
+                </div>
+                <div class="wz-body">
+                    <div class="wz-step">
+                        <div class="section-wrapper">
+                            <h1>Select Registration Type</h1>
+                            <h4>Please select number of individual entries or choose our Family Pack offer</h4>
+                            <div class="box entrybox filled-light-pink">
+                                <div class="box-ticketcounter">
+                                    <div class="bc1">
+                                        <div class="icon"> <img src="assets/images/adult.png" alt=""> </div>
+                                        <div class="name">
+                                            <span class="title">Adult</span>
+                                            <span class="note">(Aged 17+)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bc2">
+                                        <div class="chip"> <span>€25.00</span> </div>
+                                        <div class="counter">
+                                            <button class="btn">-</button>
+                                            <input type="text" class="tcount" value="0">
+                                            <button class="btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="bc3">
+                                        <div class="price">€25.00</div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <hr class="hr-pink">
+                                <div class="box-ticketcounter">
+                                    <div class="bc1">
+                                        <div class="icon"> <img src="assets/images/child.png" alt=""> </div>
+                                        <div class="name">
+                                            <span class="title">Child</span>
+                                            <span class="note">(Aged 0 to 16 Yrs)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bc2">
+                                        <div class="chip"> <span>€25.00</span> </div>
+                                        <div class="counter">
+                                            <button class="btn">-</button>
+                                            <input type="text" class="tcount" value="0">
+                                            <button class="btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="bc3">
+                                        <div class="price">€25.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="saperation">OR</div>
+                            <div class="box entrybox outlined-pink">
+                                <div class="box-ticketcounter">
+                                    <div class="bc1">
+                                        <div class="icon"><img src="assets/images/family.png" alt=""></div>
+                                        <div class="name">
+                                            <span class="title">Special Family Pack</span>
+                                            <span class="note">(2 Adults and 2 Kids)</span>
+                                            <span class="highlight">€10 OFF</span>
+                                        </div>
+                                    </div>
+                                    <div class="bc2">
+                                        <div class="chip"> <span>€25.00</span> </div>
+                                        <div class="counter">
+                                            <button class="btn">-</button>
+                                            <input type="text" class="tcount" value="0">
+                                            <button class="btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="bc3">
+                                        <div class="price">€25.00</div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <p>
+                                This is a special family offer for 2 adults and 2 kids, if needed you can add additional
+                                adults or children at the next step.</p>
+                        </div>
+                        <div class="bottom-strip">
+                            <div class="entrycount"> Total Enteries: <span class="num">0</span></div>
+                            <div class="entrycount"> Subtotal: <span class="num">€25.00</span></div>
+                        </div>
+                    </div>
+                    <div class="wz-step">
+                        <div class="section-wrapper">
+                            <h1>Enter Your Details</h1>
+                            <!--  -->
+                            <ul class="accordion">
+                                <li>
+                                    <a class="toggle completed" href=#>Adult 1 <i class="fa fa-check-circle"></i> </a>
+                                    <div class="inner">
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">First Name <br>
+                                                <input type="text" class="vinput" placeholder="Enter First Name">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Last Name <br>
+                                                <input type="text" class="vinput" placeholder="Enter Last Name">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Email Address <br>
+                                                <input type="text" class="vinput" placeholder="Enter Email Address">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Gender</label> <br>
+                                            <label for="male">
+                                                <input type="radio" name="gender" id="male" class=""> Male
+                                            </label>
+                                            <label for="female">
+                                                <input type="radio" name="gender" id="female" class=""> Female
+                                            </label>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Phone Number <br>
+                                                <input type="text" class="vinput" placeholder="Enter Phone Number">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Password <br>
+                                                <input type="password" class="vinput" placeholder="Enter Password">
+                                            </label>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div>
+                                            <a href="" class="btn btn-primary btn-primary-sm">Next</a>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <a class="toggle" href=#>Adult 2 </a>
+                                    <div class="inner">
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">First Name <br>
+                                                <input type="text" class="vinput" placeholder="Enter First Name">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Last Name <br>
+                                                <input type="text" class="vinput" placeholder="Enter Last Name">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Email Address <br>
+                                                <input type="text" class="vinput" placeholder="Enter Email Address">
+                                            </label>
+                                            <span class="inputnote"> <em> Your password will be sent here </em></span>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Gender</label> <br>
+                                            <label for="male">
+                                                <input type="radio" name="gender" id="male" class=""> Male
+                                            </label>
+                                            <label for="female">
+                                                <input type="radio" name="gender" id="female" class=""> Female
+                                            </label>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname">Phone Number <br>
+                                                <input type="text" class="vinput" placeholder="Enter Phone Number">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div>
+                                    <a href="" class="btn btn-primary btn-primary-sm">Add Adult (€25)</a>
+                                    <a href="" class="btn btn-primary btn-primary-sm">Add Child (€15)</a>
+                                </div>
+                                <!-- <li>
+                                <a class="toggle" href=#>Child 1</a>
+                                <p class="inner">
+                                    Let's make a nice big leafy tree. You have to make those little noises or it won't
+                                    work. Let's put some happy little clouds in our world. We don't really know where
+                                    this goes - and I'm not sure we really care. When you do it your way you can go
+                                    anywhere you choose. No worries. No cares. Just float and wait for the wind to blow
+                                    you around.
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="toggle" href=#>Child 2</a>
+                                <p class="inner">
+                                    Let's make a nice big leafy tree. You have to make those little noises or it won't
+                                    work. Let's put some happy little clouds in our world. We don't really know where
+                                    this goes - and I'm not sure we really care. When you do it your way you can go
+                                    anywhere you choose. No worries. No cares. Just float and wait for the wind to blow
+                                    you around.
+                                </p>
+                            </li> -->
+                            </ul>
+                            <!--  -->
+                        </div>
+                    </div>
+                    <div class="wz-step">
+                        <div class="section-wrapper">
+                            <h1>Select T-shirt Size</h1>
+                            <div class="box-teeinfo">
+                                <div class="box-tsize">
+                                    <div class="tsize inputbox">
+                                        <label for="a1-firstname">Adult 1<br>
+                                            <select name="tsize-ad1" id="tsize-ad1" class="vinput">
+                                                <option value="">Select Size</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                                <option value="">XL</option>
+                                                <option value="">XXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <!--  -->
+                                    <div class="tsize inputbox">
+                                        <label for="a1-firstname">Adult 2<br>
+                                            <select name="tsize-ad1" id="tsize-ad1" class="vinput">
+                                                <option value="">Select Size</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                                <option value="">XL</option>
+                                                <option value="">XXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <!--  -->
+                                    <div class="tsize inputbox">
+                                        <label for="a1-firstname">Child 1<br>
+                                            <select name="tsize-ad1" id="tsize-ad1" class="vinput">
+                                                <option value="">Select Size</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                                <option value="">XL</option>
+                                                <option value="">XXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <!--  -->
+                                    <div class="tsize inputbox">
+                                        <label for="a1-firstname">Child 2<br>
+                                            <select name="tsize-ad1" id="tsize-ad1" class="vinput">
+                                                <option value="">Select Size</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                                <option value="">XL</option>
+                                                <option value="">XXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="teeconcent">
+                                    <div class="dummytee">
+                                        <img src="assets/images/tee.jpg" alt="">
+                                    </div>
+                                    <div class="concent">
+                                        <label for="consent">
+                                            <input type="checkbox" class="vcheckbox" name="consent" id="consent">
+                                            If you don't want a t-shirt and want all your entry fee to go to the charity
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="box-orginfo">
+                                <div class="orginfo-cntnr">
+                                    <div class="textlabel">Are you participating as part of a company, club or
+                                        organization?
+                                    </div>
+                                    <div class="box-input">
+                                        <select name="selectorg" id="selectorg" class="lg-select vinput">
+                                            <option value="">Select Option</option>
+                                            <option value="">XYZ Organization LLC</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wz-step">
+                        <div class="section-wrapper">
+                            <h1>Finalise Order</h1>
+                            <div class="bx bx-40">
+                                <h4 class="subheading">Shipping Address</h4>
+                                <div class="inputbox fullwidth">
+                                    <label for="a1-firstname">Address Line 1 <br>
+                                        <input type="text" class="vinput" placeholder="Address Line 1">
+                                    </label>
+                                </div>
+                                <div class="inputbox fullwidth">
+                                    <label for="a1-firstname">Address Line 2 <br>
+                                        <input type="text" class="vinput" placeholder="Address Line 2">
+                                    </label>
+                                </div>
+                                <div class="tsize inputbox">
+                                    <label for="a1-firstname">Town <br>
+                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                    </label>
+                                </div>
+                                <div class="tsize inputbox">
+                                    <label for="a1-firstname">County <br>
+                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                    </label>
+                                </div>
+                                <div class="tsize inputbox">
+                                    <label for="a1-firstname">City <br>
+                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                    </label>
+                                </div>
+                                <div class="tsize inputbox">
+                                    <label for="a1-firstname">Country <br>
+                                        <select name="" id="" class="vinput fullwidth">
+                                            <option value="">Select Country</option>
+                                            <option value="">Ireland</option>
+                                            <option value="">India</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="clear"></div>
+                                <hr>
+                                <div class="discountcode">
+                                    <label for="a1-firstname">Hava a discount code?</label>
+                                    <input type="text" class="vinput lg" placeholder="Enter discount code here">
+                                    <button class="btn btn-attached">APPLY</button>
+                                </div>
+                            </div>
+                            <div class="bx bx-50 bx-ordersummary">
+                                <h4 class="subheading">Order Summary</h4>
+                                <div class="summarybox">
+                                    <div class="smryitem pt0">
+                                        <span class="itemname">1 x Adult</span>
+                                        <span class="itemvalue">€25.00</span>
+                                    </div>
+                                    <div class="smryitem">
+                                        <span class="itemname">1 x Child</span>
+                                        <span class="itemvalue">€25.00</span>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <hr>
+                                    <div class="smryitem pt0">
+                                        <span class="itemname"><strong>Subtotal</strong></span>
+                                        <span class="itemvalue"><strong>€50.00</strong></span>
+                                    </div>
+                                    <div class="smryitem">
+                                        <span class="itemname">Postage & Package</span>
+                                        <span class="itemvalue">€5.95</span>
+                                    </div>
+                                    <div class="smryitem">
+                                        <span class="itemname">Discount Code</span>
+                                        <span class="itemvalue">€0.00</span>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <hr>
+                                    <div class="smryitem total pt0">
+                                        <span class="itemname"><strong>Total</strong></span>
+                                        <span class="itemvalue"><strong>€55.95</strong></span>
+                                    </div>
+                                </div>
+                                <div class="concent end">
+                                    <label for="consent2">
+                                        <input type="checkbox" class="vcheckbox" name="consent2" id="consent2">
+                                        I wish to cover the payment processing fees of €1.15
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wz-navigator"></div>
+            </div>
+        </div>
+        <!-- End Wizzy -->
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dist/js/jquery.wizzy.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+
+    
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script>
+        $('.toggle').click(function (e) {
+            e.preventDefault();
+
+            let $this = $(this);
+
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show');
+                $this.next().slideUp(350);
+            } else {
+                $this.parent().parent().find('li .inner').removeClass('show');
+                $this.parent().parent().find('li .inner').slideUp(350);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(350);
+            }
+        });
+    </script>
+    
+
+    <script>
+        function copyURL(){
+            var dummy = document.createElement('input'),
+        text = window.location.href;
+    
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+        }
+    </script>
+</body>
+
+</html>
