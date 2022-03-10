@@ -663,3 +663,28 @@ form#form_submit {
 .lightnote{
     color: #95a6c1;
 }
+
+.dummytee {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.dummytee img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.iput-ckdonation{
+    color: #000;
+    font-size: 18px;
+}
+
+.reg-sponsors>div {
+    max-width: 12%;
+}
+
+.reg-sponsors>div img {
+    max-width: 100%;
+}

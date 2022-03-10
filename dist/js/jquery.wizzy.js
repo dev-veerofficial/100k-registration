@@ -13,10 +13,14 @@
             let navigator = elem.find('.wz-navigator');
             let content = elem.find('.wz-inner');
 
+
+            
             
             let btnNext = '<a href="#" class="btn btn-primary right btn-footer" data-action="next">Next <i class="fas fa-angle-right"></i></a>';
             let btnFinish = '<a href="#" class="btn btn-success right btn-back btn-footer" data-action="finish">PAY NOW</a>';
             let btnBack = '<a href="#" class="btn btn-default btn-outlined right btn-footer" data-action="back"><i class="fas fa-angle-left"></i> Back</a>';
+
+            let newFooter = '<div class="row px-5"><div class="col-6"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-6 text-right">Next and Previous Buttons</div></div>';
 
             let step_links = elem.find('nav a').toArray();
             let step_count = step_links.length;
@@ -113,13 +117,16 @@
                 navigator.html('');
 
                 if(step === 0){
-                    navigator.append(btnNext);
+                    // navigator.append(btnNext);
+                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnNext+'</div></div>');
                 }
                 else if(step === step_count-1){
-                    navigator.append(btnBack + btnFinish);
+                    // navigator.append(btnBack + btnFinish);
+                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnBack + btnFinish+'</div></div>');
                 }
                 else{
-                    navigator.append(btnBack + btnNext);
+                    // navigator.append(btnBack + btnNext);
+                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnBack + btnNext+'</div></div>');
                 }
 
                 elem.find('nav a').removeClass('active completed');
