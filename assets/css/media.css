@@ -1,7 +1,16 @@
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .main-spnsr {
+        order: 2;
+        margin-top: 25px;
+    }
+
+}
+
+
 @media only screen and (min-width: 300px) and (max-width: 1023px) {
 
-    
-    .reg-sponsors>div{
+
+    .reg-sponsors>div {
         min-width: 50%;
         margin-bottom: 50px;
     }
@@ -9,17 +18,20 @@
     .section-wrapper {
         padding: 10px;
     }
+
     .wz-wrapper {
         min-width: auto;
         max-width: 96%;
         margin: 0 auto;
     }
+
     .bx-40,
     .bx-50 {
         width: 100%;
         padding: 0;
         margin: 0;
     }
+
     .inputbox.fullwidth {
         margin-left: 0;
         margin-right: 0;
@@ -31,10 +43,12 @@
         padding-left: 0;
         margin-left: 0;
     }
+
     .tsize.inputbox:nth-child(odd) {
         padding-right: 0;
         margin-right: 0;
     }
+
     .bx.bx-50.bx-ordersummary h4 {
         margin: 35px auto 20px;
     }
@@ -53,6 +67,7 @@
     .inputbox {
         margin: 7px auto;
     }
+
     .concent.end {
         margin: 20px auto;
     }
@@ -81,6 +96,7 @@
         line-height: normal;
         text-align: center;
     }
+
     .box-input {
         width: 100%;
         float: none;
@@ -107,9 +123,11 @@
         width: 100%;
         padding: 0;
     }
+
     ul.accordion .inner {
         padding: 10px;
     }
+
     .radiobox label {
         margin-right: 15px;
     }
@@ -128,6 +146,7 @@
     .bc3 {
         display: none;
     }
+
     .box-ticketcounter div {
         padding: 1px 2px;
     }
@@ -135,6 +154,7 @@
     .box-ticketcounter .name .title {
         font-size: 18px;
     }
+
     .box-ticketcounter .name .note {
         font-size: 14px;
     }
@@ -157,36 +177,56 @@
         width: 35px;
         height: 45px;
         line-height: 45px;
-        background-color: transparent;}
-    .bc1{width: 45%;}
-    .bc2{width: 55%;}
-    .wz-step h4{
+        background-color: transparent;
+    }
+
+    .bc1 {
+        width: 45%;
+    }
+
+    .bc2 {
+        width: 55%;
+    }
+
+    .wz-step h4 {
         width: 100%;
         text-align: center;
-        font-size:16px;
+        font-size: 16px;
     }
-    .counter button{top: 0;}
+
+    .counter button {
+        top: 0;
+    }
 
     .counter {
         margin-left: 45px;
     }
 
-    .outlined-pink + p{
+    .outlined-pink+p {
         font-size: 14px;
         text-align: center;
     }
 
-    .outlined-pink .chip:not(.show-xs .chip), .hideon-xs { display: none;}
+    .outlined-pink .chip:not(.show-xs .chip), .hideon-xs {
+        display: none;
+    }
 
-    .show-xs{display: inline-block;}
+    .show-xs {
+        display: inline-block;
+    }
 
-    .outlined-pink .note { display: inline-block !important;}
+    .outlined-pink .note {
+        display: inline-block !important;
+    }
+
     .outlined-pink .bc1 {
         width: 57%;
     }
+
     .outlined-pink .counter {
         margin: 0 !important;
     }
+
     .outlined-pink .bc2 {
         width: 43%;
     }
@@ -220,7 +260,7 @@
         padding: 15px 0;
     }
 
-    .bottom-strip{
+    .bottom-strip {
         height: auto;
         margin-top: 20px;
         text-align: center;
@@ -236,11 +276,12 @@
         margin-right: 35px;
     }
 
-    .wz-wrapper .wz-inner .wz-navigator{
-        display: flex !important;
+    .wz-wrapper .wz-inner .wz-navigator {
+        display: flex;
         align-items: center;
         justify-content: center;
     }
+
     span.ext:after {
         content: '\a';
         white-space: pre;
@@ -253,17 +294,23 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 1366px){
+@media (min-width: 768px) and (max-width: 1366px) {
+
     .wz-wrapper.wizzy {
         min-width: auto;
         width: 96%;
     }
 }
-
-@media (min-width:1024px){
-    .entrycount span.num{
+@media screen and (min-width:767px) {
+    .wz-navigator {
+        display: block !important;
+    }
+}
+@media (min-width:1024px) {
+    .entrycount span.num {
         float: right;
         margin-left: 10px;
         line-height: 1;
     }
 }
+

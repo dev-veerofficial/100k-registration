@@ -1,26 +1,26 @@
-(function($){
+(function ($) {
 
-    $.fn.wizzy = function(options) {
-        
+    $.fn.wizzy = function (options) {
+
         let settings = $.extend({
             stepNumbers: false,
             progressType: 'fill',
         }, options);
 
-        return this.each(function(){
+        return this.each(function () {
             let elem = $(this);
             let nav = elem.find('.wz-header nav');
             let navigator = elem.find('.wz-navigator');
             let content = elem.find('.wz-inner');
 
 
-            
-            
+
+
             let btnNext = '<a href="#" class="btn btn-primary right btn-footer" data-action="next">Next <i class="fas fa-angle-right"></i></a>';
             let btnFinish = '<a href="#" class="btn btn-success right btn-back btn-footer" data-action="finish">PAY NOW</a>';
             let btnBack = '<a href="#" class="btn btn-default btn-outlined right btn-footer" data-action="back"><i class="fas fa-angle-left"></i> Back</a>';
 
-            let newFooter = '<div class="row px-5"><div class="col-6"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-6 text-right">Next and Previous Buttons</div></div>';
+            let newFooter = '<div class="row px-5"><div class="main-spnsr col-6"><img src="assets/images/sponsors/sherry-pink.png" alt=""> </div><div class="col-6 text-right">Next and Previous Buttons</div></div>';
 
             let step_links = elem.find('nav a').toArray();
             let step_count = step_links.length;
@@ -29,8 +29,8 @@
             let link_width = $(step_links[0]).width();
             let step = 0;
 
-            function init(){
-                for(i = 1 ; i < step_count ; i++){
+            function init() {
+                for (i = 1; i < step_count; i++) {
                     step_status[i] = 0;
                 }
                 step_status[0] = 1;
@@ -38,20 +38,20 @@
                 render();
             }
 
-            function moveProgress(step){
-                if(settings.progressType == 'fill'){
+            function moveProgress(step) {
+                if (settings.progressType == 'fill') {
                     let progressWidth = link_width * (step + 1);
-                    nav.find('.progress').css({'width':progressWidth + 'px'});
+                    nav.find('.progress').css({ 'width': progressWidth + 'px' });
                 }
-                if(settings.progressType == 'slide'){
-                    nav.find('.progress').css({'width':link_width + 'px'});
+                if (settings.progressType == 'slide') {
+                    nav.find('.progress').css({ 'width': link_width + 'px' });
                     let distance = link_width * (step);
-                    nav.find('.progress').css({'left':distance + 'px'});
+                    nav.find('.progress').css({ 'left': distance + 'px' });
                 }
-                
+
             }
 
-            function updateTemplate(){
+            function updateTemplate() {
                 nav.append('<div class="progress"></div>');
                 moveProgress(step);
                 step_links.forEach(element => {
@@ -63,17 +63,17 @@
              * 
              * @param {boolean} show 
              */
-            function loader(show){
-                let loader ='<div class="loading"></div>';
-                if(show === true){ //Show Loader Spinner
-                    content.fadeOut(400,function(){
+            function loader(show) {
+                let loader = '<div class="loading"></div>';
+                if (show === true) { //Show Loader Spinner
+                    content.fadeOut(400, function () {
                         elem.addClass('progress');
                         setTimeout(() => {
                             elem.append(loader);
                         }, 500);
                     });
                 }
-                else{
+                else {
                     elem.find('.loading').remove();
                     elem.removeClass('progress');
                     setTimeout(() => {
@@ -86,53 +86,53 @@
              * 
              * @param {string} action 
              */
-            function react(action){
+            function react(action) {
 
-                if(step >= 0 && step < step_count){
-                    if(action === 'next'){
+                if (step >= 0 && step < step_count) {
+                    if (action === 'next') {
                         step_status[step++] = 1;
-                        if(step_status[step] === 0){
+                        if (step_status[step] === 0) {
                             step_status[step] = 1;
                         }
                         render(step);
                     }
-                    else if(action == 'back'){
+                    else if (action == 'back') {
                         step--;
                         render(step);
                     }
-                    else if(action == 'finish'){
+                    else if (action == 'finish') {
                         loader(true);
                         setTimeout(() => {
                             loader(false);
                         }, 3000);
                     }
                 }
-                
+
             }
 
             /**
              * Render out the content
              */
-            function render(){
+            function render() {
                 navigator.html('');
 
-                if(step === 0){
+                if (step === 0) {
                     // navigator.append(btnNext);
-                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnNext+'</div></div>');
+                    navigator.append('<div class="row px-3 align-items-center"><div class="main-spnsr col-12 col-md-6 text-center text-md-left mb-0"><img src="assets/images/sponsors/sherry-pink.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">' + btnNext + '</div></div>');
                 }
-                else if(step === step_count-1){
+                else if (step === step_count - 1) {
                     // navigator.append(btnBack + btnFinish);
-                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnBack + btnFinish+'</div></div>');
+                    navigator.append('<div class="row px-3 align-items-center"><div class="main-spnsr col-12 col-md-6 text-center text-md-left mb-0"><img src="assets/images/sponsors/sherry-pink.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">' + btnBack + btnFinish + '</div></div>');
                 }
-                else{
+                else {
                     // navigator.append(btnBack + btnNext);
-                    navigator.append('<div class="row px-3 align-items-center"><div class="col-12 col-md-6 text-center text-md-left mb-4 mb-md-0"><img src="assets/images/sponsors/sherry.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">'+btnBack + btnNext+'</div></div>');
+                    navigator.append('<div class="row px-3 align-items-center"><div class="main-spnsr col-12 col-md-6 text-center text-md-left mb-0"><img src="assets/images/sponsors/sherry-pink.png" alt=""> </div><div class="col-12 col-md-6 text-center text-md-right">' + btnBack + btnNext + '</div></div>');
                 }
 
                 elem.find('nav a').removeClass('active completed');
-                for(i = 0 ; i < step ; i++){
+                for (i = 0; i < step; i++) {
                     $(step_links[i]).addClass('completed');
-                }
+                } ``
                 $(step_links[i]).addClass('active');
 
                 elem.find('.wz-body .wz-step').removeClass('active');
@@ -144,25 +144,25 @@
             /**
              * Click events
              */
-            $(elem).on('click','.wz-navigator .btn',function(e){
+            $(elem).on('click', '.wz-navigator .btn', function (e) {
                 e.preventDefault();
                 let action = $(this).data('action');
                 react(action);
             });
 
-            $(elem).on('click','nav a',function(e) {
+            $(elem).on('click', 'nav a', function (e) {
                 e.preventDefault();
                 let step_check = $(this).index();
-                if(step_status[step_check] === 1 || step_status[step_check] === 2){
+                if (step_status[step_check] === 1 || step_status[step_check] === 2) {
                     step = $(this).index();
                     render();
                 }
-                else{
+                else {
                     console.log('Check errors');
                 }
             });
 
-            
+
             init();
         });
     }

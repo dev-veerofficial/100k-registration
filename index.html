@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link href="dist/css/jquery.wizzy.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
-    <link href="dist/css/jquery.wizzy.css" rel="stylesheet">
 
     <title>Wizzy</title>
 
@@ -318,26 +319,53 @@
                                         <div class="concent m-0 ml-4 mb-2">
                                             <label for="consent">
                                                 <input type="checkbox" class="vcheckbox" name="consent" id="consent">
-                                                I don't want any T-shirt.
+                                                No T-shirt Required
                                             </label>
                                         </div>
-                                        <div class="col-12 alert alert-warning mx-3">
-                                            Due to overwhelming demand we are restocking and there is a 7 days
-                                            turnaround on L, XL, XXL, and U12, but you will get your t-shirt!
+                                        <div class="col-12">
+                                            <div class=" alert alert-warning mr-3">
+                                                Due to overwhelming demand we are restocking and there is a 7 days
+                                                turnaround on L, XL, XXL, and U12, but you will get your t-shirt!
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 teeconcent">
                                     <div class="dummytee px-4">
-                                        <img src="assets/images/tee.jpg" alt="">
-                                    </div>                                    
+                                        <img src="assets/images/tee_2022.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="row px-3">
+                                <div class="col-12 box-orginfo">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="textlabels">Are you participating as part of a company, club or
+                                                organization?
+                                                <p class="note">Do you want your company/club added to this list? <a
+                                                        href="#">Email Us</a>.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+                                            <div class="box-input">
+                                                <select name="selectorg" id="selectorg" class="lg-select vinput">
+                                                    <option value="">Select Option</option>
+                                                    <option value="">XYZ Organization LLC</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- <div class="box-orginfo">
                                 <div class="orginfo-cntnr">
                                     <div class="textlabel">Are you participating as part of a company, club or
                                         organization?
+                                    <p class="note">Do you want your company/club added to this list? <a href="#">Email Us</a>.</p>
                                     </div>
                                     <div class="box-input">
                                         <select name="selectorg" id="selectorg" class="lg-select vinput">
@@ -353,111 +381,180 @@
                     <div class="wz-step">
                         <div class="section-wrapper">
                             <h1>Finalise Order</h1>
-                            <div class="bx bx-40">
-                                <h4 class="subheading">Shipping Address</h4>
-                                <div class="inputbox fullwidth">
-                                    <label for="a1-firstname">Address Line 1 <br>
-                                        <input type="text" class="vinput" placeholder="Address Line 1">
-                                    </label>
-                                </div>
-                                <div class="inputbox fullwidth">
-                                    <label for="a1-firstname">Address Line 2 <br>
-                                        <input type="text" class="vinput" placeholder="Address Line 2">
-                                    </label>
-                                </div>
-                                <div class="tsize inputbox">
-                                    <label for="a1-firstname">City / Town <br>
-                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
-                                    </label>
-                                </div>
-                                <div class="tsize inputbox">
-                                    <label for="a1-firstname">County <br>
-                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
-                                    </label>
-                                </div>
-                                <div class="tsize inputbox">
-                                    <label for="a1-firstname">City <br>
-                                        <input type="text" class="vinput fullwidth" placeholder="Enter Town">
-                                    </label>
-                                </div>
-                                <div class="tsize inputbox">
-                                    <label for="a1-firstname">Country <br>
-                                        <select name="" id="" class="vinput fullwidth">
-                                            <option value="">Select Country</option>
-                                            <option value="">Ireland</option>
-                                            <option value="">India</option>
-                                        </select>
-                                    </label>
-                                </div>
-                                <div class="clear"></div>
-                                <hr class="hr-lightblue">
-                                <div class="discountcode">
-                                    <label for="a1-firstname">Hava a discount code?</label>
-                                    <input type="text" class="vinput lg" placeholder="Enter discount code here">
-                                    <button class="btn btn-attached">APPLY</button>
-                                </div>
-                            </div>
-                            <div class="bx bx-50 bx-ordersummary">
-                                <h4 class="subheading">Order Summary</h4>
-                                <div class="summarybox">
-                                    <div class="smryitem pt0">
-                                        <span class="itemname">1 x Adult</span>
-                                        <span class="itemvalue">€25.00</span>
+
+                            <div class="row">
+                                <!-- Shipping Address Form -->
+                                <div class="col-12 col-lg-4">
+                                    <h4 class="subheading">Shipping Address</h4>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">Address Line 1 <br>
+                                            <input type="text" class="vinput" placeholder="Address Line 1">
+                                        </label>
                                     </div>
-                                    <div class="smryitem">
-                                        <span class="itemname">1 x Child</span>
-                                        <span class="itemvalue">€25.00</span>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">Address Line 2 <br>
+                                            <input type="text" class="vinput" placeholder="Address Line 2">
+                                        </label>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">City / Town <br>
+                                            <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                        </label>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">County <br>
+                                            <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                        </label>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">City <br>
+                                            <input type="text" class="vinput fullwidth" placeholder="Enter Town">
+                                        </label>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="a1-firstname">Country <br>
+                                            <select name="" id="" class="vinput fullwidth">
+                                                <option value="">Select Country</option>
+                                                <option value="">Ireland</option>
+                                                <option value="">India</option>
+                                            </select>
+                                        </label>
                                     </div>
                                     <div class="clear"></div>
-                                    <hr>
-                                    <div class="smryitem pt0">
-                                        <span class="itemname"><strong>Sub-Total</strong></span>
-                                        <span class="itemvalue"><strong>€50.00</strong></span>
-                                    </div>
-                                    <div class="smryitem">
-                                        <span class="itemname">Postage & Package</span>
-                                        <span class="itemvalue">€5.95</span>
-                                    </div>
-                                    <div class="smryitem">
-                                        <span class="itemname">Donation Amount</span>
-                                        <span class="itemvalue"><input type="text"
-                                                class="form-control iput-ckdonation text-right"
-                                                placeholder="€0.00"></span>
-                                    </div>
-                                    <div class="smryitem">
-                                        <span class="itemname">Discount Code</span>
-                                        <span class="itemvalue">€0.00</span>
-                                    </div>
-                                    <div class="clear"></div>
-                                    <hr>
-                                    <div class="smryitem total pt0">
-                                        <span class="itemname"><strong>Total</strong></span>
-                                        <span class="itemvalue"><strong>€55.95</strong></span>
+                                    <!-- <hr class="hr-lightblue">
+                                    <div class="discountcode">
+                                        <label for="a1-firstname">Hava a discount code?</label>
+                                        <input type="text" class="vinput lg" placeholder="Enter discount code here">
+                                        <button class="btn btn-attached">APPLY</button>
+                                    </div> -->
+                                </div>
+                                <!-- Order Summary -->
+                                <div class="col-12 col-lg-8 px-4 border-left">
+
+                                    <div class="row bg-liteblue">
+                                        <div class="col-12">
+                                            <div class="smry-heading py-1 my-2">
+                                                <h5><strong>Order Summary</strong></h5>
+                                            </div>
+                                            <div class="smry-body">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-6 col-lg-6 mb-2">1 x Adult</div>
+                                                            <div class="col-6 col-lg-6 mb-2">€25.00</div>
+                                                            <div class="col-6 col-lg-6 mb-2">1 x Child</div>
+                                                            <div class="col-6 col-lg-6 mb-2">€15.00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-6 col-lg-6 mb-2">Postage & Package</div>
+                                                            <div class="col-6 col-lg-6 mb-2">€5.95</div>
+                                                            <div class="col-6 col-lg-6 mb-2">Donation Amount</div>
+                                                            <div class="col-6 col-lg-6 mb-2">€20.00</div>
+                                                            <div class="col-6 col-lg-6 mb-2">Discount Code</div>
+                                                            <div class="col-6 col-lg-6 mb-2">€0.00</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="smry-fundraising">
+                                                <div class="row bg-litepink border-y py-3">
+                                                    <div class="col-12">
+                                                        <h5 class="txt-pink my-0"> <strong>100K Fundraising</strong>
+                                                        </h5>
+                                                        <!-- <p>
+                                                    This year we have built our own fundraising platform that is much
+                                                    easier to use, it's automatically setup for you and optional to use.
+                                                    If you wish to pledge a donation instead of fundraising you can do
+                                                    it now upon signup.
+                                                </p> -->
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <form action="" name="smry-donation" class="smry-donation">
+                                                            <div class="my-3"><strong>Select Amount</strong></div>
+                                                            <ul class="list-inline smry-radio mb-0">
+                                                                <li class="list-inline-item">
+                                                                    <input type="radio" name="dnt-amt" id="amt0">
+                                                                    <label for="amt0">€0</label>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <input type="radio" name="dnt-amt" id="amt5">
+                                                                    <label for="amt5">€5</label>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <input type="radio" name="dnt-amt" id="amt10">
+                                                                    <label for="amt10">€10</label>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <input type="radio" name="dnt-amt" id="amt20">
+                                                                    <label for="amt20">€20</label>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <input type="radio" name="dnt-amt" id="amt50">
+                                                                    <label for="amt50">€50</label>
+                                                                </li>
+                                                                <li class="list-inline-item">
+                                                                    <div class="input-group mb-0">
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Other Amount"
+                                                                            aria-label="Other Amount"
+                                                                            aria-describedby="basic-addon2">
+                                                                        <div class="input-group-append">
+                                                                            <button
+                                                                                class="btn btn-outline-secondary btn-pink"
+                                                                                type="button"><i
+                                                                                    class="fa fa-check"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="row mt-4">
+                                                    <div class="col-12 col-lg-5">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Discount Code"
+                                                                aria-label="Enter Discount Code"
+                                                                aria-describedby="basic-addon2">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-secondary btn-pink"
+                                                                    type="button">Apply</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-7">
+                                                        <div class="row entrycount">
+                                                            <div class="col-4 offset-4">
+                                                                <h5> <span class="num"><Strong>Total</Strong></span>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <h5> <span class="num"><strong>€75.95</strong></h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="concent end">
-                                    <label for="consent2">
-                                        <input type="checkbox" class="vcheckbox" name="consent2" id="consent2">
-                                        I wish to cover the payment processing fees of €1.15
-                                    </label>
-                                </div>
-                                <div class="concent end">
-                                    <label for="tnc">
-                                        <input type="checkbox" class="vcheckbox" name="tnc" id="tnc">
-                                        I've read and accept <a href="javascript:void(0)">terms and condition </a>
-                                    </label>
-                                </div>
+                                <!--  -->
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div class="wz-navigator"></div>
             </div>
         </div>
         <!-- End Wizzy -->
         <!-- Sponsor Logos -->
         <div class="container mt-5">
-            <div class="row flex-md-nowrap mt-5 pt-5 reg-sponsors align-items-center">
+            <div class="row flex-md-nowrap reg-sponsors align-items-center">
                 <div class="col"> <img src="assets/images/sponsors/01-anord-mardix.png" alt=""> </div>
                 <div class="col"> <img src="assets/images/sponsors/02-cathedral.png" alt=""> </div>
                 <div class="col"> <img src="assets/images/sponsors/03-colmquinn.png" alt=""> </div>
