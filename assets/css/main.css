@@ -747,3 +747,39 @@ ul.smry-radio li input[type="radio"]:checked+label{
 ul.smry-radio li input[type="radio"]{
     display: none;
 }
+
+.fr-icon{
+    background: #DD478C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ckout-tagline{
+    color: #8E7A82;
+    font-size: 0.9em;
+}
+
+.chk-total{
+    background-color: rgba(189,207,228,0.44);
+    height: 50px;
+}
+
+.chk-total h5{
+    line-height: 35px;
+    color: #346192;
+}
+.chk-subtotal{
+    line-height: 35px;
+    color: #346192;
+}
+
+.form-check label{
+    cursor: pointer;
+    color: #111;
+}
