@@ -13,7 +13,7 @@ body {
     background-color: #DD488C;
 }
 
-hr{
+hr {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -60,6 +60,11 @@ a, .txt-pink{
     overflow: hidden;
     margin: 0 auto 20px;
     height: auto;
+}
+
+.ty-page .branding{
+    width: 300px;
+    max-width: 300px;
 }
 
 .branding img {
@@ -458,6 +463,21 @@ label:not(.radiobox label){
     width: 100%;
 }
 
+.btn-primary{
+    min-width: 70px;
+    min-height: 40px;
+    line-height: 40px;
+    background-color: #dd478c;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 20px 12px 5px 0px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    text-decoration: none;
+}
 .btn-primary-sm{
     min-width: 70px;
     min-height: 30px;
@@ -783,3 +803,4 @@ ul.smry-radio li input[type="radio"]{
     cursor: pointer;
     color: #111;
 }
+

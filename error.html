@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="dist/css/jquery.wizzy.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/media.css" rel="stylesheet">
+
+    <title>Wizzy</title>
+
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script> -->
+</head>
+
+<body class="bg-litepink">
+    <div class="wrapper ty-page">
+        <!-- Brand Logo -->
+        <div class="branding d-flex align-items-center justify-content-center">
+            <div class="mx-3">
+                <a href="javascript:void(0);"> <img src="assets/images/logo.png" alt=""></a>
+            </div>
+            <div>
+                <img src="assets/images/logo-bci.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body shadow-sm">
+                            <div class="ty-heading mt-3 pt-4 alert alert-danger">
+                                <div class="text-center text-danger"><i
+                                        class="fa fa-exclamation-triangle fa-3x d-lg-none"></i>
+                                </div>
+                                <h2 class="text-danger text-center text-lg-left"> <i
+                                        class="fa fa-exclamation-triangle d-none d-lg-inline"></i> Transaction Failed !
+                                </h2>
+                                <h5 class="my-4">
+                                   Something went wrong with your order.
+                                </h5>
+
+                                <a href="#" class="btn btn-primary right btn-footer">Try Again</a>
+
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sponsor Logos -->
+        <div class="container mt-5">
+            <div class="row flex-md-nowrap reg-sponsors align-items-center">
+                <div class="col"> <img src="assets/images/sponsors/01-anord-mardix.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/02-cathedral.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/03-colmquinn.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/04-kpmg.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/05-overhaul.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/06-uhy.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/07-wuxibio.png" alt=""> </div>
+                <div class="col"> <img src="assets/images/sponsors/08-wuxivaccine.png" alt=""> </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dist/js/jquery.wizzy.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script>
+        $('.toggle').click(function (e) {
+            e.preventDefault();
+
+            let $this = $(this);
+
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show');
+                $this.next().slideUp(350);
+            } else {
+                $this.parent().parent().find('li .inner').removeClass('show');
+                $this.parent().parent().find('li .inner').slideUp(350);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(350);
+            }
+        });
+    </script>
+</body>
+
+</html>
