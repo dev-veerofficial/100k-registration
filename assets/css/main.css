@@ -804,3 +804,6 @@ ul.smry-radio li input[type="radio"]{
     color: #111;
 }
 
+.errminus {
+    margin-top: -10px;
+}
