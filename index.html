@@ -170,15 +170,30 @@
                                             </label>
                                         </div>
                                         <div class="inputbox">
-                                            <label for="a1-firstname">Gender</label> <br>
-                                            <div class="radiobox">
+                                            <label for="a1-firstname">Confirm Email Address <br>
+                                                <input type="text" class="vinput" placeholder="Confirm Email Address">
+                                            </label>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname" class="mb-0">Gender</label>
+                                            <!-- <div class="radiobox">
                                                 <input type="radio" id="male" name="radio-group1">
                                                 <label for="male">Male</label>
                                                 <input type="radio" id="female" name="radio-group1">
                                                 <label for="female">Female</label>
-                                            </div>
+                                            </div> -->
+                                            <ul class="list-inline smry-radio mb-0 d-flex">
+                                                <li class="list-inline-item px-0 mt-0">
+                                                    <input type="radio" name="gender1" id="male">
+                                                    <label for="male">Male</label>
+                                                </li>
+                                                <li class="list-inline-item px-1 mt-0">
+                                                    <input type="radio" name="gender1" id="female">
+                                                    <label for="female">Female</label>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="clear"></div>
+                                        <!-- <div class="clear"></div> -->
                                         <div class="inputbox">
                                             <label for="a1-firstname">Phone Number <br>
                                                 <input type="text" class="vinput" placeholder="Enter Phone Number">
@@ -217,15 +232,31 @@
                                             <span class="inputnote"> <em> Your password will be sent here </em></span>
                                         </div>
                                         <div class="inputbox">
-                                            <label for="a1-firstname">Gender</label> <br>
-                                            <div class="radiobox">
+                                            <label for="a1-firstname">Confirm Email <br>
+                                                <input type="text" class="vinput" placeholder="Confirm Email Address">
+                                            </label>
+                                            <span class="inputnote"> <em> </em></span>
+                                        </div>
+                                        <div class="inputbox">
+                                            <label for="a1-firstname" class="mb-0">Gender</label>
+                                            <!-- <div class="radiobox">
                                                 <input type="radio" id="male2" name="radio-group2">
                                                 <label for="male2">Male</label>
                                                 <input type="radio" id="female2" name="radio-group2">
                                                 <label for="female2">Female</label>
-                                            </div>
+                                            </div> -->
+                                            <ul class="list-inline smry-radio mb-0 d-flex">
+                                                <li class="list-inline-item px-0 mt-0">
+                                                    <input type="radio" name="gender2" id="male2">
+                                                    <label for="male2">Male</label>
+                                                </li>
+                                                <li class="list-inline-item px-1 mt-0">
+                                                    <input type="radio" name="gender2" id="female2">
+                                                    <label for="female2">Female</label>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="clear"></div>
+                                        <!-- <div class="clear"></div> -->
                                         <div class="inputbox">
                                             <label for="a1-firstname">Phone Number <br>
                                                 <input type="text" class="vinput" placeholder="Enter Phone Number">
@@ -388,14 +419,16 @@
                                 </div>
                                 <div class="col-12 col-lg-4 d-flex justify-content-end flex-column">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control border border-danger" placeholder="Enter Discount Code"
-                                            aria-label="Enter Discount Code" aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control border border-danger"
+                                            placeholder="Enter Discount Code" aria-label="Enter Discount Code"
+                                            aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary btn-pink"
                                                 type="button">Apply</button>
-                                        </div>                                        
+                                        </div>
                                     </div>
-                                    <div class="text-danger mb-3 errminus"> <i class="fa fa-exclamation-circle"></i> Incorrect Discount Code</div>
+                                    <div class="text-danger mb-3 errminus"> <i class="fa fa-exclamation-circle"></i>
+                                        Incorrect Discount Code</div>
                                 </div>
                             </div>
                             <div class="row">
@@ -427,7 +460,7 @@
                                             <input type="text" class="vinput fullwidth" placeholder="Enter Town">
                                         </label>
                                     </div>
-                                    <div class="w-100">
+                                    <div class="w-100 pb-4 pb-md-0">
                                         <label for="a1-firstname">Country <br>
                                             <select name="" id="" class="vinput fullwidth">
                                                 <option value="">Select Country</option>
@@ -500,9 +533,9 @@
                                                         <h5 class="txt-pink"><strong>OR</strong></h5>
                                                     </div>
                                                     <div>
-                                                        <div class="input-group mb-0">
+                                                        <div class="input-group mb-0 px-1">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Other Amount" aria-label="Other Amount"
+                                                                placeholder="Enter Donation Amount" aria-label="Other Amount"
                                                                 aria-describedby="basic-addon2">
                                                             <div class="input-group-append">
                                                                 <button class="btn btn-outline-secondary btn-pink"
@@ -552,7 +585,7 @@
                                                             <div class="col-6 col-lg-6 mb-2 text-right">€20.00</div>
                                                             <div class="col-6 col-lg-6 mb-2">Discount Code</div>
                                                             <div class="col-6 col-lg-6 mb-2 text-right">€0.00</div>
-                                                            <div class="col-12 chk-total px-4 py-2 rounded">
+                                                            <div class="col-12 chk-total px-3 py-2 rounded">
                                                                 <div class="row">
                                                                     <div class="col-6 col-lg-6">
                                                                         <h5 class="m-0"> <span
